@@ -1,13 +1,15 @@
 var express = require('express');
-var bodyParser = require('body-parser');//Node.js body parsing middleware.
+//Node.js body parsing middleware.
+var bodyParser = require('body-parser');
 
 var dishRouter = express.Router();
 
-dishRouter.use(bodyParser.json());
+dishRouter.use(bodyParser.json());// parser the JSON in Body
 
 dishRouter.route('/')
 .all(function(req,res,next) {
-      res.writeHead(200, { 'Content-Type': 'text/plain' });
+
+      res.writeHead(200, {'Content-Type': 'text/plain' });
       next();
 })
 
@@ -25,6 +27,7 @@ dishRouter.route('/')
 
 dishRouter.route('/:dishId')
 .all(function(req,res,next) {
+
       res.writeHead(200, { 'Content-Type': 'text/plain' });
       next();
 })

@@ -5,6 +5,7 @@ var promotionRouter = express.Router();
 
 promotionRouter.use(bodyParser.json());
 
+
 promotionRouter.route('/')
 .all(function(req,res,next) {
       res.writeHead(200, { 'Content-Type': 'text/plain' });

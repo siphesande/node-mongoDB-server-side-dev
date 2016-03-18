@@ -32,6 +32,7 @@ leadershipRouter.route('/:leaderId')
 
 .get(function(req,res,next){
         res.end('Will send leaders of the leader: ' + req.params.leaderId +' to you!');
+        
 })
 
 .put(function(req, res, next){
@@ -43,5 +44,6 @@ leadershipRouter.route('/:leaderId')
 .delete(function(req, res, next){
         res.end('Deleting leader: ' + req.params.leaderId);
 });
+
 
 module.exports = leadershipRouter
