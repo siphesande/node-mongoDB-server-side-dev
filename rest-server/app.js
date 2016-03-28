@@ -12,8 +12,10 @@ var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 
 var app = express();
+
 var mongoose = require('mongoose');
 
+//connecting to MongoDB database
 var url = 'mongodb://localhost:27017/conFusion';
 mongoose.connect(url);
 var db = mongoose.connection;
