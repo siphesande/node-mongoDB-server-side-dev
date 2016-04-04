@@ -1,22 +1,20 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
 2 info using npm@2.14.12
 3 info using node@v4.2.4
 4 verbose config Skipping project config: /home/siphesande/.npmrc. (matches userconfig)
-5 verbose readDependencies loading dependencies from /home/siphesande/package.json
-6 error install Couldn't read dependencies
-7 verbose stack Error: ENOENT: no such file or directory, open '/home/siphesande/package.json'
-7 verbose stack     at Error (native)
-8 verbose cwd /home/siphesande/node-mongoDB-server-side-dev
-9 error Linux 3.13.0-24-generic
-10 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
-11 error node v4.2.4
-12 error npm  v2.14.12
-13 error path /home/siphesande/package.json
-14 error code ENOPACKAGEJSON
-15 error errno -2
-16 error syscall open
-17 error package.json ENOENT: no such file or directory, open '/home/siphesande/package.json'
-17 error package.json This is most likely not a problem with npm itself.
-17 error package.json npm can't find a package.json file in your current directory.
-18 verbose exit [ -2, true ]
+5 verbose stack Error: ENOENT: no such file or directory, open '/home/siphesande/package.json'
+5 verbose stack     at Error (native)
+6 verbose cwd /home/siphesande/node-mongoDB-server-side-dev
+7 error Linux 3.13.0-24-generic
+8 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+9 error node v4.2.4
+10 error npm  v2.14.12
+11 error path /home/siphesande/package.json
+12 error code ENOENT
+13 error errno -2
+14 error syscall open
+15 error enoent ENOENT: no such file or directory, open '/home/siphesande/package.json'
+15 error enoent This is most likely not a problem with npm itself
+15 error enoent and is related to npm not being able to find a file.
+16 verbose exit [ -2, true ]
