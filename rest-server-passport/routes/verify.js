@@ -1,3 +1,5 @@
+// grab the things we need
+// REQUIRE ALL IMPORTED FILES
 var User = require('../models/user');
 var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('../config.js');
@@ -17,7 +19,7 @@ exports.verifyOrdinaryUser = function (req, res, next) {
         // verifies secret and checks exp
         jwt.verify(token, config.secretKey, function (err, decoded) {
             if (err) {
-                var err = new Error('You are not authenticated!');
+                var err = new Error("You are not Authenticated!");
                 err.status = 401;
                 return next(err);
             } else {
@@ -34,3 +36,16 @@ exports.verifyOrdinaryUser = function (req, res, next) {
         return next(err);
     }
 };
+//This function will check an ordinary user to see if s/he has Admin privileges
+exports.verifyAdmin = function(req, res, next) {
+ 
+  if (!req.decoded._doc.admin) {
+  
+   
+    var err = new Error('You are not authorized to perform such actions!');
+    err.status = 403;
+    return next(err);
+  } else {
+    return next();
+  };
+}

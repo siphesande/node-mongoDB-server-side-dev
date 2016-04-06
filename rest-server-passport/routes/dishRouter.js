@@ -20,6 +20,7 @@ dishRouter.route('/')
 .post(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (req, res, next) {
     Dishes.create(req.body, function (err, dish) {
         if (err) throw err;
+       
         console.log('Dish created!');
         var id = dish._id;
         res.writeHead(200, {
